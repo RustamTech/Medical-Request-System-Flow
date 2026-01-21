@@ -29,7 +29,6 @@ import java.util.Set;
 @Getter
 @Setter
 @EntityListeners(AuditingEntityListener.class)
-
 public class Doctor {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,6 +53,6 @@ public class Doctor {
   @ManyToMany(mappedBy = "doctors")
   private Set<Patient> patients;
 
-  @OneToMany(mappedBy = "doctor", cascade = CascadeType.PERSIST, orphanRemoval = true)
+  @OneToMany(mappedBy = "doctor", cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, orphanRemoval = true)
   private List<Request> requests;
 }
