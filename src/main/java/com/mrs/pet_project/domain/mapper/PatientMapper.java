@@ -6,8 +6,9 @@ import com.mrs.pet_project.domain.dto.patient.PatientUpdateDto;
 import com.mrs.pet_project.domain.entity.Patient;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
+import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface PatientMapper {
   PatientDto toDto(Patient patient);
   Patient toEntity(PatientCreateDto patientDto);

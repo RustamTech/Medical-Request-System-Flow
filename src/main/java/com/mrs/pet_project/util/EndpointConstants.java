@@ -28,4 +28,14 @@ public final class EndpointConstants {
     public static final String BY_ID = "/{id}";
     public static final String STATUS = "/{id}/status";
   }
+
+  // Medical Document endpoints:
+  public static final class MedicalDocuments {
+    public static final String BASE = API_V1 + "/documents";
+    public static final String BY_ID = "/{id}";
+    public static final String BY_ID_DOWNLOAD = "/{id}/download";
+    public static final String BY_PATIENT = "/patient/{patientId}";
+    public static final String BY_DOCTOR = "/doctor/{doctorId}";
+    public static final String BY_REQUEST = "/request/{requestId}";
+  }
 }
