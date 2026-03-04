@@ -1,5 +1,6 @@
-package com.mrs.pet_project.domain.dto.patientDto;
+package com.mrs.pet_project.domain.dto.patient;
 
+import com.mrs.pet_project.util.ValidationConstants;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -18,6 +19,6 @@ public class PatientCreateDto {
   @Email
   private String email;
 
-  @Pattern(regexp = "^\\+?[1-9]\\d{1,14}$")
+  @Pattern(regexp = ValidationConstants.VALIDATE_PHONE_NUMBER)
   private String number;
 }

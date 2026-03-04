@@ -1,4 +1,4 @@
-package com.mrs.pet_project.domain.dto.requestDto;
+package com.mrs.pet_project.domain.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
